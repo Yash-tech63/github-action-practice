@@ -2,17 +2,19 @@
 # Workflow name
 name: Hello
 
-# Trigger the workflow manually
+# on tells when the workflow should run(give indentation by tab)
 on:
   workflow_dispatch:
 
-# Jobs define what the workflow will do
+# job tells what the workflow should do,there can be one or more than one jobs hence we write jobs
+# jobs is an object so needs indentation
+
 jobs:
   say-hello:
-    # Create an Ubuntu environment
+    # creates an ephermal container with ubuntu running
     runs-on: ubuntu-latest
 
-    # Steps to execute
+  # that ephermal container will have steps to execute, hence name those steps and use run: run has the command
     steps:
       - name: Say hello to everyone
         run: echo "hello dosto"
