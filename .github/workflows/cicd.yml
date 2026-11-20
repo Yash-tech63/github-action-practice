@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
      - name: running test cases
-      run: echo " testing the app"
+       run: echo " testing the app"
   deploy:
      runs-on: ubuntu-latest
      steps:
