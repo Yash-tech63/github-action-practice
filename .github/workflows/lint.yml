@@ -1,0 +1,17 @@
+# what is the goal of your workflow
+# goal: whenever someone change the code
+name: auto Linter
+
+on: 
+ push:
+  paths: "*.html"
+
+jobs:
+  code:
+   runs-on: ubuntu-latest
+  # this step will automatically clone the code of the branch into runner
+   steps:
+  - name: checkout/clone the code
+    uses: actions/checkout@v7
+    # this step will install the linting tool
+  - name: npm install --save-dev html-validate
