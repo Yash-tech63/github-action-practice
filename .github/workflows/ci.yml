@@ -1,4 +1,5 @@
 # goal: Build the image for devboard fronted and push to deocker hub
+# goal: Build the image for devboard fronted and push to deocker hub
 name: CI
 
 on:
@@ -17,4 +18,5 @@ jobs:
        with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+     
      
